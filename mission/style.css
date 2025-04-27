@@ -1,43 +1,39 @@
 /* General body setup */
 body {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 20px; /* Default font size */
-  line-height: 1.5; /* Increase line height for better readability */
+  font-size: 20px;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f4f4f4; /* Optional background color */
 }
 
 /* Container setup */
 .container {
   max-width: 600px;
-  width: 100%; /* Ensure it takes up full width up to the max width */
   padding: 40px;
   box-sizing: border-box;
   text-align: center;
-  background-color: #fff; /* White background for the container */
   border: 1px solid #ccc; /* Thin border around the container */
 }
 
 /* Header styles */
 header h1 {
-  text-transform: uppercase; /* Make the title all caps */
-  letter-spacing: 3px; /* Increase space between letters */
+  text-transform: uppercase;
+  letter-spacing: 3px;
   margin-bottom: 0.5rem;
 }
 
 header h2 {
-  text-transform: uppercase; /* Make the subtitle all caps */
-  color: #006EB6; /* Color for the subtitle */
+  text-transform: uppercase;
+  color: #006EB6;
   font-weight: normal; /* Not bold */
-  letter-spacing: 2px; /* Space out the letters */
+  letter-spacing: 2px;
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-size: 1.2rem; /* Slightly smaller than h1 */
+  font-size: 1.2rem;
 }
 
 /* Thin line under the subtitle */
@@ -48,18 +44,14 @@ hr {
 }
 
 /* Main content */
-main {
-  text-align: center; /* Center the main content */
-}
-
 main p {
-  text-align: left; /* Align paragraphs to the left */
+  text-align: left;
   margin-bottom: 1rem;
 }
 
 main ol {
-  text-align: left; /* Left align ordered list */
-  padding-left: 20px; /* Indent list items */
+  text-align: left;
+  padding-left: 20px;
 }
 
 /* Footer styles */
@@ -68,6 +60,6 @@ footer {
 }
 
 footer img {
-  width: 150px; /* Resize the logo image */
-  height: auto; /* Maintain the aspect ratio */
+  width: 150px;
+  height: auto; /* Maintain aspect ratio */
 }
