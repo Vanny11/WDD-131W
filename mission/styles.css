@@ -1,67 +1,74 @@
-/* General body setup */
 body {
-    font-family: 'Times New Roman', Times, serif; /* Times New Roman */
-    font-size: 20px; /* 20px default font size */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  
-  /* Container setup */
-  .container {
-    max-width: 600px;
-    padding: 40px;
-    box-sizing: border-box;
-    text-align: center;
-    border: 1px solid #ccc; /* Thin light gray border */
-  }
-  
-  /* Header styles */
-  header h1 {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 0.5rem;
-  }
-  
-  header h2 {
-    text-transform: uppercase;
-    color: #006EB6; /* Subtitle color */
-    font-weight: normal; /* Not bold */
-    letter-spacing: 2px;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
-  
-  /* Thin line under the subtitle */
-  hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 20px 0;
-  }
-  
-  /* Main content */
-  main p {
-    text-align: left;
-    margin-bottom: 1rem;
-    line-height: 1.5; /* More readable spacing */
-  }
-  
-  main ol {
-    text-align: left;
-    padding-left: 20px;
-    line-height: 1.5;
-  }
-  
-  /* Footer styles */
-  footer {
-    margin-top: 2rem;
-  }
-  
-  footer img {
-    width: 150px;
-  }
-  
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+}
+
+.container {
+  max-width: 600px;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+header h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+}
+
+header h2 {
+  text-transform: uppercase;
+  color: #006EB6;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+main p, main ol {
+  text-align: left;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+main ol {
+  padding-left: 20px;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+footer img {
+  width: 150px;
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: #333;
+  color: white;
+}
+
+body.dark header h2 {
+  color: #70B6E5;
+}
+
+body.dark hr {
+  border-top: 1px solid #777;
+}
