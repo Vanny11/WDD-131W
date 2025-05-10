@@ -1,41 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* Base Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header, main, footer {
-    max-width: 640px;
-    margin: 1rem auto;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    background-color: #d0e8f2; /* Light blueish background */
-  }
-  
-  main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  section {
-    padding: 1rem;
-    background-color: white;
-  }
-  
-  /* Media Query for screen widths 500px and greater */
-  @media screen and (min-width: 500px) {
-    header {
-      background-color: black;
-      color: white;
-    }
-  
-    main {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  margin: 2rem;
+  background: #fff;
+  color: #000;
+}
+
+.side-by-side {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Base style for each mock layout */
+.mock {
+  max-width: 640px;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #c9d6f0;
+}
+
+.mock header {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mock main {
+  display: grid;
+  gap: 1rem;
+}
+
+.mock section {
+  background: white;
+  border: 2px solid #c9d6f0;
+  padding: 1rem;
+}
+
+.mock footer {
+  background: #c9d6f0;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Specific styles for mobile layout */
+.mock.mobile header {
+  background-color: #c9d6f0;
+  color: black;
+}
+
+.mock.mobile main {
+  grid-template-columns: 1fr;
+}
+
+/* Specific styles for desktop layout */
+.mock.desktop header {
+  background-color: black;
+  color: white;
+}
+
+.mock.desktop main {
+  grid-template-columns: 1fr 1fr;
+}
