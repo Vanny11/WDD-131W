@@ -1,71 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+/* Base styles */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: white;
-  margin: 2rem;
-  color: black;
-}
-
-/* Shared container styling for both mock blocks */
-.mock {
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  background-color: #c9d6f0;
-  width: fit-content;
-}
-
-/* Mobile block */
-.mock.mobile {
-  width: 320px;
-  margin: 2rem auto 4rem 5rem; /* slight left alignment */
-}
-
-/* Desktop block */
-.mock.desktop {
-  width: 640px;
-  margin: 0 auto 2rem auto;
-}
-
-/* Header styling */
-.mock header {
-  padding: 1rem;
-  background-color: #aabbe6;
-  color: black;
-}
-
-.mock.desktop header {
-  background-color: black;
-  color: white;
-}
-
-.mock header h1 {
   margin: 0;
-  font-size: 1.6rem;
+  padding: 0;
+  background-color: white;
 }
 
-/* Footer styling */
-.mock footer {
-  background-color: #aabbe6;
-  padding: 0.6rem 1rem;
-  font-size: 0.9rem;
+header, main, footer {
+  max-width: 640px;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #b4c1f0; /* bluish color */
 }
 
 /* Main layout */
-.mock main {
+main {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
-  padding: 1rem;
 }
 
-/* Scripture sections */
-.mock section {
+/* Section styles */
+section {
+  padding: 1rem;
   background-color: white;
-  border: 3px solid #aabbe6;
-  padding: 1rem;
-  box-sizing: border-box;
 }
 
-.mock section h2 {
-  margin-top: 0;
+/* Media query for larger screens */
+@media screen and (min-width: 500px) {
+  header {
+    background-color: black;
+    color: white;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
 }
