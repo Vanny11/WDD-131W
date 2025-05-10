@@ -2,67 +2,70 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: white;
   margin: 2rem;
-  background: #fff;
-  color: #000;
-}
-
-.side-by-side {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-/* Base style for each mock layout */
-.mock {
-  max-width: 640px;
-  width: 100%;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  box-sizing: border-box;
-  background-color: #c9d6f0;
-}
-
-.mock header {
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.mock main {
-  display: grid;
-  gap: 1rem;
-}
-
-.mock section {
-  background: white;
-  border: 2px solid #c9d6f0;
-  padding: 1rem;
-}
-
-.mock footer {
-  background: #c9d6f0;
-  padding: 0.5rem;
-  font-size: 0.9rem;
-  margin-top: 1rem;
-}
-
-/* Specific styles for mobile layout */
-.mock.mobile header {
-  background-color: #c9d6f0;
   color: black;
 }
 
-.mock.mobile main {
-  grid-template-columns: 1fr;
+/* Shared container styling for both mock blocks */
+.mock {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #c9d6f0;
+  width: fit-content;
 }
 
-/* Specific styles for desktop layout */
+/* Mobile block */
+.mock.mobile {
+  width: 320px;
+  margin: 2rem auto 4rem 5rem; /* slight left alignment */
+}
+
+/* Desktop block */
+.mock.desktop {
+  width: 640px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Header styling */
+.mock header {
+  padding: 1rem;
+  background-color: #aabbe6;
+  color: black;
+}
+
 .mock.desktop header {
   background-color: black;
   color: white;
 }
 
-.mock.desktop main {
-  grid-template-columns: 1fr 1fr;
+.mock header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+/* Footer styling */
+.mock footer {
+  background-color: #aabbe6;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Main layout */
+.mock main {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Scripture sections */
+.mock section {
+  background-color: white;
+  border: 3px solid #aabbe6;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.mock section h2 {
+  margin-top: 0;
 }
