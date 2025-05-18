@@ -11,18 +11,19 @@
 </head>
 <body>
   <header>
-    <h1>Cool Pics 📷</h1>
-    <button id="menuButton">Menu</button>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">People</a></li>
-        <li><a href="#">Places</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+      <h1>Cool Pics 📷</h1>
+      <button id="menu-button">Menu</button>
+      <nav>
+        <ul class="hide">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">People</a></li>
+          <li><a href="#">Places</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
 
   <main>
     <h2>Current Work</h2>
@@ -38,7 +39,10 @@
       <figure><img src="norris-sm.jpeg" alt="Cool pic" /></figure>
     </section>
   </main>
-
+  <dialog id="modal">
+    <img id="modal-img" src="" alt="">
+    <button class="close-viewer">X</button>
+  </dialog>
   <footer>
     <p>© 2023 Not a real site 😀</p>
   </footer>
