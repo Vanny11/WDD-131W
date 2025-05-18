@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CoolPics - A gallery of cool images." />
+  <meta name="description" content="Cool Pics Gallery" />
   <meta name="author" content="Your Name" />
   <title>Cool Pics 📷</title>
   <link rel="stylesheet" href="coolpics.css" />
-  <script defer src="coolpics.js"></script>
+  <script src="coolpics.js" defer></script>
 </head>
 <body>
+
   <header>
     <h1>Cool Pics 📷</h1>
     <button id="menu-button">Menu</button>
     <nav>
-      <ul class="hide">
+      <ul id="menu" class="hide">
         <li><a href="#">Home</a></li>
         <li><a href="#">People</a></li>
         <li><a href="#">Places</a></li>
@@ -24,28 +25,33 @@
     </nav>
   </header>
 
-  <main>
-    <h2>Current Work</h2>
-    <section class="gallery">
-      <figure><img src="norris-sm.jpeg" alt="Norris Geyser Basin" /></figure>
-      <figure><img src="norris-sm.jpeg" alt="Norris Geyser Basin" /></figure>
-      <figure><img src="norris-sm.jpeg" alt="Norris Geyser Basin" /></figure>
-      <figure><img src="norris-sm.jpeg" alt="Norris Geyser Basin" /></figure>
-      <figure><img src="norris-sm.jpeg" alt="Norris Geyser Basin" /></figure>
-      <figure><img src="norris-sm.jpeg" alt="Norris Geyser Basin" /></figure>
-      <figure><img src="norris-sm.jpeg" alt="Norris Geyser Basin" /></figure>
-      <figure><img src="norris-sm.jpeg" alt="Norris Geyser Basin" /></figure>
-      <figure><img src="norris-sm.jpeg" alt="Norris Geyser Basin" /></figure>
-    </section>
-  </main>
+  <!-- Light gray background applied directly here -->
+  <div class="page-content">
+    <main>
+      <h2>Current Work</h2>
+      <section class="gallery">
+        <figure><img src="norris-sm.jpeg" alt="Hot spring"></figure>
+        <figure><img src="norris-sm.jpeg" alt="Hot spring"></figure>
+        <figure><img src="norris-sm.jpeg" alt="Hot spring"></figure>
+        <figure><img src="norris-sm.jpeg" alt="Hot spring"></figure>
+        <figure><img src="norris-sm.jpeg" alt="Hot spring"></figure>
+        <figure><img src="norris-sm.jpeg" alt="Hot spring"></figure>
+        <figure><img src="norris-sm.jpeg" alt="Hot spring"></figure>
+        <figure><img src="norris-sm.jpeg" alt="Hot spring"></figure>
+        <figure><img src="norris-sm.jpeg" alt="Hot spring"></figure>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2023 Not a real site :)
+  </footer>
 
   <dialog id="modal">
     <img id="modal-img" src="" alt="">
     <button class="close-viewer">X</button>
   </dialog>
 
-  <footer>
-    <p>© 2023 Not a real site 😀</p>
-  </footer>
 </body>
 </html>
+

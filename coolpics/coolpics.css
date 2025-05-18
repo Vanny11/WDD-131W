@@ -4,6 +4,8 @@
   --primary-color: #52489c;
   --accent-color: #f45b69;
   --text-light: #fff;
+  --text-dark: #333;
+  --background: #ebebeb;
   --primary-font: Arial, Helvetica, sans-serif;
   --secondary-font: "Mooli", sans-serif;
 }
@@ -17,10 +19,17 @@
 body {
   font-family: var(--primary-font);
   font-size: 1.2em;
-  background-color: #eee;
-  color: #333;
+  background-color: var(--primary-color); /* Purple header/footer container */
+  color: var(--text-dark);
 }
 
+/* Light gray wrapper for gallery area */
+.page-content {
+  background-color: var(--background); /* THIS makes the center light gray */
+  padding: 2em 1em;
+}
+
+/* HEADER */
 header {
   background-color: var(--primary-color);
   color: var(--text-light);
@@ -34,10 +43,11 @@ header h1 {
   margin-bottom: 0.5em;
 }
 
+/* NAV */
 #menu-button {
   background: none;
   border: none;
-  color: white;
+  color: var(--text-light);
   font-size: 1em;
   font-family: var(--primary-font);
   margin: 0.5em 0;
@@ -49,54 +59,65 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-nav ul li {
-  margin: 0.2em 0;
+  gap: 0.5em;
+  padding: 0.5em 0;
 }
 
 nav ul li a {
   color: var(--accent-color);
   text-decoration: none;
+  font-weight: bold;
 }
 
+.hide {
+  display: none;
+}
+
+/* MAIN */
 main {
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
-  padding: 1em;
 }
 
 main h2 {
   font-family: var(--secondary-font);
-  margin-bottom: 1em;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 1.5em;
 }
 
+/* GALLERY */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1em;
+  gap: 2em;
   justify-items: center;
 }
 
 .gallery figure {
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 0.5em;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .gallery img {
   width: 250px;
   height: 250px;
   object-fit: cover;
+  display: block;
 }
 
+/* FOOTER */
 footer {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
   padding: 1em;
   font-size: 0.9em;
-  margin-top: 2em;
 }
 
-/* Modal Styles */
+/* MODAL */
 dialog {
   width: 100%;
   height: 100%;
@@ -119,6 +140,7 @@ dialog img {
   object-fit: contain;
   background-color: white;
   margin: 20vh auto 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
 .close-viewer {
@@ -126,7 +148,6 @@ dialog img {
   top: 20vh;
   right: 5vw;
   font-size: 1.5rem;
-  color: black;
   background: white;
   border: 1px solid #ccc;
   padding: 0.2em 0.5em;
@@ -134,15 +155,9 @@ dialog img {
   z-index: 11;
 }
 
-/* Responsive Menu */
-.hide {
-  display: none;
-}
-
-/* --- Medium Screens (700px+) --- */
+/* RESPONSIVE */
 @media (min-width: 700px) {
   nav ul {
-    display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 2em;
@@ -152,12 +167,15 @@ dialog img {
     display: none;
   }
 
+  .hide {
+    display: flex !important;
+  }
+
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* --- Large Screens (1000px+) --- */
 @media (min-width: 1000px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
