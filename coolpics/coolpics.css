@@ -34,7 +34,6 @@ header h1 {
   margin-bottom: 0.5em;
 }
 
-/* Fixed naming to match JavaScript: */
 #menu-button {
   background: none;
   border: none;
@@ -97,12 +96,6 @@ footer {
   margin-top: 2em;
 }
 
-/* Responsive Menu - hide by default on small screens */
-.hide {
-  display: none;
-}
-
-/* Modal Styles */
 /* Modal Styles */
 dialog {
   width: 100%;
@@ -133,7 +126,7 @@ dialog img {
   top: 20vh;
   right: 5vw;
   font-size: 1.5rem;
-  color: black; /* Make sure it's visible */
+  color: black;
   background: white;
   border: 1px solid #ccc;
   padding: 0.2em 0.5em;
@@ -141,6 +134,10 @@ dialog img {
   z-index: 11;
 }
 
+/* Responsive Menu */
+.hide {
+  display: none;
+}
 
 /* --- Medium Screens (700px+) --- */
 @media (min-width: 700px) {
