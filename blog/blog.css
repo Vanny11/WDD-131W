@@ -1,0 +1,130 @@
+/* General */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #473144;
+    background-color: #fff;
+  }
+  h1, h2 {
+    font-family: 'Lora', serif;
+  }
+  a {
+    text-decoration: none;
+    color: #AF1B3F;
+  }
+  
+  /* Skip to Content */
+  .skiptocontent a {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #AF1B3F;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+  }
+  .skiptocontent a:focus {
+    top: 0;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #EFC69B;
+  }
+  
+  header h1 {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    margin: 0;
+    color: #473144;
+  }
+  
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: end;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid #EFC69B;
+    border-bottom: 1px solid #EFC69B;
+    max-width: 900px;
+  }
+  
+  nav li a {
+    padding: 0.5rem 1rem;
+    color: #AF1B3F;
+    font-size: 1.1rem;
+  }
+  
+  /* Main Layout */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    max-width: 1100px;
+    margin: auto;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  aside.filters {
+    border: 1px solid #EFC69B;
+    padding: 1rem;
+    color: #473144;
+  }
+  
+  /* Book Articles */
+  .articles {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .book {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .details {
+    text-align: right;
+    color: #AF1B3F;
+    font-size: 0.9rem;
+    padding-right: 0.5rem;
+    line-height: 1.5;
+  }
+  
+  .content h2 {
+    margin-top: 0;
+    color: #AF1B3F;
+  }
+  
+  .content {
+    text-align: left;
+  }
+  
+  .content img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .content p {
+    margin-top: 0;
+    color: #473144;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #EFC69B;
+    color: #473144;
+  }
+  
