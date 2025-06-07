@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  .card-container {
+    display: grid;
+    gap: 2rem;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  form {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .card {
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    background: white;
+  }
+  
+  .card-back {
+    z-index: 0;
+  }
+  
+  .card-front {
+    z-index: 1;
+  }
+  
+  .errorMsg {
+    color: red;
+    font-weight: bold;
+  }
+  
