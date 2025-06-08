@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credit Card Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+</head>
+<body>
+
+  <a href="creditcard/index.html">Credit Card Form</a>
+
+  <form id="credit-card">
+    <div class="card-wrapper">
+
+      <!-- Card Back -->
+      <div class="card back">
+        <div class="black-strip"></div>
+        <label for="cvv">CVC/CVV
+          <input type="text" name="cvv" id="cvv" placeholder="XXX" required maxlength="4" />
+        </label>
+      </div>
+
+      <!-- Card Front -->
+      <div class="card front">
+        <p class="total">TOTAL: $199</p>
+        <img class="card-image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHJ4PSIxMiIgZmlsbD0iI0ZGNTU0MiIvPjxjaXJjbGUgY3g9IjMwIiBjeT0iMzAiIHI9IjgiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4=" alt="Card Icon" />
+        
+        <div class="input-row">
+          <label for="cardNumber">CARD NUMBER
+            <input type="text" name="cardNumber" id="cardNumber" placeholder="1234 5678 9101 1020" required maxlength="19" />
+          </label>
+        </div>
+
+        <div class="input-row">
+          <label for="cardHolder">CARD HOLDER
+            <input type="text" name="cardHolder" id="cardHolder" placeholder="John Doe" required />
+          </label>
+
+          <label>EXPIRATION
+            <div class="expiration">
+              <input type="text" name="expMonth" placeholder="MM" required maxlength="2" />
+              <input type="text" name="expYear" placeholder="YY" required maxlength="2" />
+            </div>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="errorMsg"></p>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="card.js"></script>
+</body>
+</html>

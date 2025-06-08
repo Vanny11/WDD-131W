@@ -1,39 +1,119 @@
+/* Reset body and base layout */
 body {
     font-family: Arial, sans-serif;
-    background: #f3f3f3;
-    margin: 0;
+    background-color: #fff;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  .card-container {
-    display: grid;
-    gap: 2rem;
-    max-width: 400px;
-    margin: auto;
+  /* Link at the top */
+  a {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: blue;
+    text-decoration: underline;
   }
   
+  /* Positioning of the form */
   form {
-    display: grid;
-    gap: 1rem;
+    position: relative;
+    width: 400px;
   }
   
+  /* Wrapper around both card front and back */
+  .card-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+  }
+  
+  /* Both cards share these base styles */
   .card {
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    background: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
   }
   
-  .card-back {
+  /* Back card behind */
+  .card.back {
     z-index: 0;
   }
   
-  .card-front {
+  /* Front card on top */
+  .card.front {
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* The orange chip image */
+  .card-image {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 40px;
+  }
+  
+  /* Top text */
+  .total {
+    font-family: monospace;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Black strip on card back */
+  .black-strip {
+    height: 40px;
+    background-color: black;
+    margin-bottom: 40px;
+  }
+  
+  /* Input rows for organization */
+  .input-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Shared styles for all labels and inputs */
+  label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 0.85rem;
+    flex: 1;
+  }
+  
+  input {
+    padding: 5px;
+    font-size: 1rem;
+    margin-top: 4px;
+  }
+  
+  /* Flex container for MM and YY */
+  .expiration {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Button and error message */
+  button {
+    margin-top: 290px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid black;
+    background-color: white;
+    cursor: pointer;
   }
   
   .errorMsg {
     color: red;
-    font-weight: bold;
+    margin-top: 10px;
   }
   
