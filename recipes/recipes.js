@@ -274,37 +274,67 @@ const recipes = [
     }
   ];
   
-  function renderRecipes(recipes) {
-    const container = document.querySelector(".recipes");
-    recipes.forEach((recipe) => {
-      const card = document.createElement("div");
-      card.classList.add("recipe-card");
-  
-      card.innerHTML = `
-        <img src="${recipe.image}" alt="Image of ${recipe.name}">
-        <h2>${recipe.name}</h2>
-        <p class="description">${recipe.description}</p>
-        <p><strong>Prep Time:</strong> ${recipe.prepTime} | <strong>Cook Time:</strong> ${recipe.cookTime}</p>
-        <p><strong>Author:</strong> ${recipe.author}</p>
-        <div class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
-          ${renderStars(recipe.rating)}
-        </div>
-      `;
-  
-      container.appendChild(card);
-    });
-  }
-  
-  function renderStars(rating) {
-    const fullStars = Math.floor(rating);
-    const halfStar = rating % 1 >= 0.5 ? 1 : 0;
-    const emptyStars = 5 - fullStars - halfStar;
-  
-    return (
-      "⭐".repeat(fullStars) +
-      (halfStar ? "⭐" : "") +
-      "☆".repeat(emptyStars)
+const searchForm = document.querySelector('.search-form');
+const searchInput = document.getElementById('search');
+const recipesSection = document.querySelector('.recipes');
+
+// Show only "Apple Crisp" on initial load
+document.addEventListener('DOMContentLoaded', () => {
+  const defaultRecipe = recipes.find(r => r.name.toLowerCase() === "apple crisp");
+  renderRecipes([defaultRecipe]);
+});
+
+/// Smart Search functionality: name, description, tags, ingredients
+searchForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const query = searchInput.value.toLowerCase().trim();
+
+  const filteredRecipes = recipes.filter(recipe => {
+    const nameMatch = recipe.name.toLowerCase().includes(query);
+    const descMatch = recipe.description.toLowerCase().includes(query);
+    const ingredientMatch = recipe.recipeIngredient.some(ing =>
+      ing.toLowerCase().includes(query)
     );
-  }
+    const tagMatch = recipe.tags.some(tag =>
+      tag.toLowerCase().includes(query)
+    );
+    return nameMatch || descMatch || ingredientMatch || tagMatch;
+  });
+
+  renderRecipes(filteredRecipes.length ? filteredRecipes : []);
+});
+
+
+// Render function
+function renderRecipes(recipesToRender) {
+  recipesSection.innerHTML = ''; // Clear previous
+
+  recipesToRender.forEach((recipe) => {
+    const card = document.createElement("div");
+    card.classList.add("recipe-card");
+
+    card.innerHTML = `
+      <div class="recipe-img">
+        <img src="images/${recipe.image}" alt="Image of ${recipe.name}">
+      </div>
+      <div class="recipe-content">
+        <span class="tag">${recipe.tags[0]}</span>
+        <h2 class="recipe-title">${recipe.name}</h2>
+        <div class="rating">${renderStars(recipe.rating)}</div>
+        <p class="description">${recipe.description}</p>
+      </div>
+    `;
+
+    recipesSection.appendChild(card);
+  });
+}
+
+function renderStars(rating) {
+  const fullStars = Math.floor(rating);
+  const halfStar = rating % 1 >= 0.5 ? 1 : 0;
+  const emptyStars = 5 - fullStars - halfStar;
+
+  return "★".repeat(fullStars) + (halfStar ? "½" : "") + "☆".repeat(emptyStars);
+}
+
   
-  document.addEventListener("DOMContentLoaded", () => renderRecipes(recipes));
